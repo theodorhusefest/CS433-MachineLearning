@@ -13,5 +13,5 @@ def least_squares(y, tx):
     w_star = np.linalg.solve(np.dot(tx.T, tx), np.dot(tx.T, y))
     mse = (1/len(y))*np.transpose(y - tx@w_star).dot((y - tx@w_star))
     
-    return mse, w_star
+    return w_star
     
